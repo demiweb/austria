@@ -1,0 +1,13 @@
+<!-- begin popup -->
+<div class="popup popup--color js-popup{% if popup.thanks %} popup--active{% endif %}" data-popup="thanks">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+    
+    {{ mixins.icon('tick', 'popup__icon') }}
+
+    <div class="popup__title">Спасибо!</div>
+
+    <div class="popup__text">Ваша заявка принята. Наш менеджер свяжетсяс Вами в ближайщее время. Ожидайте звонка.</div>
+  </div>
+</div>
+<!-- end popup -->

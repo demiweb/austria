@@ -1,0 +1,65 @@
+{%set
+form = {
+  fields: [
+    {
+      name: 'input',
+      type: 'text',
+      placeholder: '',
+      value: 'Маргар',
+      fieldClass: '',
+      fieldAttributes: { required: '' }
+    },
+    {
+      name: 'input',
+      type: 'email',
+      placeholder: 'Ваш e-mail',
+      value: '',
+      fieldClass: '',
+      fieldAttributes: { required: '' }
+    },
+    {
+      name: 'textarea',
+      type: '',
+      placeholder: 'Ваш вопрос',
+      value: '',
+      fieldClass: 'js-textarea',
+      fieldAttributes: { required: '' }
+    }
+  ]
+}
+%}
+
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="call">
+  <div class="popup__inner">
+    <button class="popup__close close js-popup-close"></button>
+
+    <div class="popup__title">Задать вопрос</div>
+
+    <form class="popup__form form">
+      {% for i in form.fields %}
+      <div class="form__field">
+        {{ mixins.input(
+          name = i.name,
+          mod = '',
+          type = i.type,
+          placeholder = i.placeholder,
+          value = i.value,
+          fieldClass = i.fieldClass,
+          fieldAttributes = i.fieldAttributes,
+          label = { last: '<span></span>' }
+        ) }}
+      </div>
+      {% endfor %}
+
+      <div class="form__field form__btn">
+        {{ mixins.btn(
+          title = 'задать вопрос',
+          mod = 'btn--full btn--accent',
+          href = false
+        ) }}
+      </div>
+    </form>
+  </div>
+</div>
+<!-- end popup -->

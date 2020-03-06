@@ -14,8 +14,10 @@
 
             <div class="hero__btn">
               {{ mixins.btn(
-                title = 'подробнее',
-                mod = ''
+                title = 'задать вопрос',
+                mod = 'js-popup-open',
+                href = false,
+                attributes = { 'data-popup-target': 'call' }
               ) }}
             </div>
           </div>

@@ -1,0 +1,22 @@
+.input
+  font-size: em(18)
+  position: relative
+  #{$text-inputs}
+    width: 100%
+    border-bottom: 1px solid #b5b5b5
+    height: rem(35)
+    padding: .2rem 0
+    padding-left: rem(15)
+    +placeholder
+      color: #b5b5b5
+
+    &:focus
+      border-color: currentColor
+
+    &:required + span
+      &::before
+        content: '*'
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0

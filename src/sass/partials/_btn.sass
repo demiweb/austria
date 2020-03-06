@@ -6,7 +6,7 @@
   text-transform: uppercase
   font-size: em(18)
 
-  border: 2px solid currentColor
+  border: 2px solid $white
   border-radius: 5px
 
   min-width: 210px
@@ -15,4 +15,22 @@
   +tr(color .3s)
 
   +hover
+    color: $c-text
+    background-color: $white
+  &:active
+    color: $c-text
+    background-color: #c8c8c7
+
+  &--accent
     color: $accent
+    border-color: $accent
+    +hover
+      color: $white
+      background-color: $accent
+    &:active
+      color: $white
+      background-color: #a61704
+
+  &--full
+    width: 100%
+    min-width: 0

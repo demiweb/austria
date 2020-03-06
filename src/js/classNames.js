@@ -2,6 +2,7 @@ export default {
   lazy: 'js-lazy',
   lightgallery: 'js-lightgallery',
   headerMeta: 'js-header-info',
+  textarea: 'js-textarea',
   menu: {
     burger: 'js-burger',
     menu: 'js-menu',
