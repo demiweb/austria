@@ -2,12 +2,17 @@
   padding-top: rem(65)
   padding-bottom: rem(85)
 
+  +sm
+    padding-top: rem(50, $base-fz-sm)
+    padding-bottom: rem(50, $base-fz-sm)
+
   &__top
     padding-bottom: rem(20)
     border-bottom: 2px solid $light
     margin-bottom: rem(55)
     &--flex
       display: flex
+      flex-wrap: wrap
       justify-content: space-between
       align-items: center
 
@@ -16,6 +21,8 @@
 
   &__pagination
     margin-top: rem(50)
+    +sm
+      margin-top: rem(30, $base-fz-sm)
 
 .section-link
   font-size: em(16)

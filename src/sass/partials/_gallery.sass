@@ -6,16 +6,43 @@
   margin-left: rem(-15)
   margin-right: rem(-15)
 
+  +xxs
+    margin-left: 0
+    margin-right: 0
+
   &__item
     width: calc(25% - #{rem(30)})
     margin-left: rem(15)
     margin-right: rem(15)
     margin-bottom: rem(30)
+    padding-top: 15%
+
+    +md
+      width: calc(33.33333% - #{rem(30)})
+      padding-top: 25%
+
+    +xs
+      width: calc(50% - #{rem(30)})
+      padding-top: 60%
+
+    +xxs
+      width: 100%
+      margin-left: 0
+      margin-right: 0
 
   &--lg
+    +xs
+      margin-left: 0
+      margin-right: 0
+
     #{$this}__item
       width: calc(50% - #{rem(30)})
       margin-bottom: rem(40)
+      padding-top: 0 !important
+      +xs
+        width: 100%
+        margin-left: 0
+        margin-right: 0
 
 .gallery-item
   $this: &
@@ -23,8 +50,7 @@
   +cover
   display: block
   background-color: $light
-  border-radius: 5px
-  padding-top: 15%
+  border-radius: 5px  
 
   &__img
     +cover

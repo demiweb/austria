@@ -8,6 +8,7 @@
     padding-top: rem(90)
     padding-bottom: rem(90)
 
+
   &__right
     position: absolute
     z-index: 1
@@ -16,6 +17,14 @@
     right: 0
 
     width: percentage(1180 / 1920)
+
+    +lg
+      width: 50%
+
+    +sm
+      position: relative
+      padding-top: 50%
+      width: 100%
 
     iframe
       position: absolute
@@ -27,17 +36,26 @@
   &__content
     max-width: 34%
     padding-right: rem(15)
+    +lg
+      max-width: 50%
+    +sm
+      max-width: none
 
   &__inner
     position: relative
 
   &--fu
     padding-top: rem(85)
+
+    +sm
+      padding-top: rem(50, $base-fz-sm)
     
     #{$this}__left
       background-color: $white
       padding-top: 0
       padding-bottom: 16%
+      +sm
+        padding-bottom: rem(50)
 
     #{$this}__right
 

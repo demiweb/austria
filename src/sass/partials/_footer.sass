@@ -11,12 +11,17 @@
 
   &__logo
     margin-right: rem(65)
+    +md
+      margin-right: 0
+      margin-bottom: rem(30)
 
   &__nav
     flex-grow: 1
     display: flex
     .nav:first-child
       margin-right: rem(115)
+    +md
+      margin-bottom: rem(25)
 
   &__copy
     width: 100%
@@ -27,3 +32,6 @@
   &__right
     flex-grow: 1
     display: flex
+    +md
+      width: 100%
+      display: block

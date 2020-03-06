@@ -31,12 +31,15 @@
     margin-bottom: rem(10)
 
   &--hor
-    flex-direction: row
+    +xxsmin
+      flex-direction: row
 
     #{$this}__img
-      width: calc(50% - #{rem(15)})
-      padding-top: 32%
+      +xxsmin
+        width: calc(50% - #{rem(15)})
+        padding-top: 32%
 
     #{$this}__content
-      width: calc(50% + #{rem(15)})
-      padding-left: rem(15)
+      +xxsmin
+        width: calc(50% + #{rem(15)})
+        padding-left: rem(15)

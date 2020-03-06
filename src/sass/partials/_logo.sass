@@ -4,9 +4,19 @@
   display: flex
   align-items: center
 
+  +xl
+    font-size: 13px
+  +lg
+    font-size: 12px
+  +md
+    font-size: 11px
+  +sm
+    font-size: 8px
+
   &__img
-    margin-right: rem(25)
-    flex: 0 0 rem(120)
+    margin-right: em(25)
+    width: em(120)
+    flex: 0 0 em(120)
 
   &__content
     display: block
@@ -20,14 +30,15 @@
     color: $white
 
     padding: .2em .7em
-    margin-bottom: rem(10)
+    margin-bottom: em(10)
 
   &__text
     display: block
 
   &--footer
     #{$this}__img
-      flex: 0 0 rem(90)
+      width: em(90)
+      flex: 0 0 em(90)
 
     #{$this}__title
       background-color: #464646
