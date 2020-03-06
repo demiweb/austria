@@ -1,7 +1,16 @@
 .hero
-  &__slide
-    +cover
-    background-color: $c-text-aux
+  &__slider
+    .tns-nav
+      position: absolute
+      z-index: 3
+      bottom: rem(45)
+      left: 50%
+      transform: translate(-50%, 0)
+      width: 100%
+      max-width: $container-max-width
+      padding: 0 $container-padding-static
+
+  &__slide    
     color: $white
     position: relative
 
@@ -10,8 +19,10 @@
 
     +before
       +coverdiv
-      z-index: 0
+      z-index: 1
       background-color: rgba($black, .75)
+
+    
 
   &__title
     margin-bottom: rem(15)
@@ -20,8 +31,20 @@
     font-size: em(30)
     font-weight: 300
     margin-bottom: rem(45)
+    +xxs
+      font-size: em(20, $base-fz-sm)
 
   &__content
     max-width: 740px
     position: relative
-    z-index: 1
+    z-index: 2
+
+  &__bg
+    +coverdiv
+    +cover
+    z-index: 0
+    background-color: $c-text-aux
+    display: none
+    .tns-slide-active &
+      display: block
+

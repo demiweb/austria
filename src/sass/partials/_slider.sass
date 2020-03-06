@@ -2,15 +2,38 @@
   &__wrap
     position: relative
 
+    button[data-action="stop"], button[data-action="start"], 
+      display: none
+
+    .tns-nav
+      button
+        display: inline-block
+        position: relative
+
+        width: rem(16)
+        height: rem(16)
+
+        border-radius: 50%
+        border: 1px solid  $white
+
+        +notlast
+          margin-right: rem(20)
+
+        +before
+          +vcenter
+
+          display: none
+
+          border-radius: 50%
+          background-color: $accent
+
+          width: rem(6)
+          height: rem(6)
+
+        &.tns-nav-active
+          +before
+            display: block
+
   &--hero
     &__wrap
-      .slider
-        &__pagination
-          position: absolute
-          z-index: 1
-          bottom: rem(45)
-          left: 50%
-          transform: translate(-50%, 0)
-          width: 100%
-          max-width: $container-max-width
-          padding: 0 $container-padding-static
+      

@@ -1,9 +1,11 @@
 <!-- begin hero -->
 <section class="hero">
-  <div class="hero-slider slider__wrap slider--hero__wrap">
-    <div class="slider slder--hero js-slider">
-      {# {% for i in range(0, 3) %} #}
-      <div class="slide hero__slide js-lazy" data-background-image="./img/hero/home.jpg">
+  <div class="hero__slider slider__wrap slider--hero__wrap">
+    <div class="slider slder--hero js-slider" data-slider="hero">
+      {% for i in range(0, 3) %}
+      <div class="slide hero__slide" >
+        <div class="hero__bg js-lazy" data-background-image="./img/hero/home.jpg"></div>
+
         <div class="container">
           <div class="hero__content">
             <h2 class="hero__title title title--h1">Добро пожаловать на сайт</h2>
@@ -19,10 +21,8 @@
           </div>
         </div>
       </div>
-      {# {% endfor %} #}
+      {% endfor %}
     </div>
-
-    <div class="slider__pagination js-slider-pagination">pagination</div>
   </div>
 </section>
 <!-- end hero -->
