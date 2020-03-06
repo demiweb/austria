@@ -4,14 +4,7 @@
   &__item
     display: inline-block
     +notfirst
-      margin-left: rem(20)
-
-    &--current
-      a
-        text-decoration: underline
-      +hover
-        a
-          text-decoration: none
+      margin-left: rem(20)    
 
   &__link
     position: relative
@@ -26,10 +19,18 @@
       border-top: 2px solid currentColor
       +hidden
       +tr(opacity .3s, visibility .3s)
+
     +hover
-      color: $accent
-      +before
-        +visible
+     @extend #{$this}__link--current
+
+    &--current
+      &:not(#{$this}__link--static)
+        color: $accent
+        +before
+          +visible
+
+    &--static
+      text-decoration: underline
 
   &--footer
     #{$this}__item

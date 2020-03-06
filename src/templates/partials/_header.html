@@ -1,5 +1,5 @@
 <!-- begin header -->
-<header class="header">
+<header class="header{% if header.mod %} {{ header.mod }}{% endif %}">
   <div class="header__top">
     <div class="container">
       <div class="header__top-in">
@@ -33,12 +33,12 @@
           hasWrap = true,
           modifications = { wrap: 'header__nav', list: 'nav__list', item: 'nav__item', link: 'nav__link' },
           list = [
-            { link: 'Информация' },
+            { link: 'Информация', modLink: 'nav__link--current' },
             { link: 'Новости' },
             { link: 'Галерея' },
             { link: 'Об Австрии' },
             { link: 'Контакты' },
-            { link: 'Посольство Австрии в Москве', modItem: 'nav__item--current' }
+            { link: 'Посольство Австрии в Москве', modLink: 'nav__link--static' }
           ]
         ) }}
       </div>

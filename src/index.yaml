@@ -2,3 +2,5 @@ ProjectTitle: austria
 
 PageList:
 - file: home.html
+- file: contacts.html
+- file: about.html

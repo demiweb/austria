@@ -1,4 +1,6 @@
 .s-contacts
+  $this: &
+
   position: relative
 
   &__left
@@ -25,3 +27,17 @@
   &__content
     max-width: 34%
     padding-right: rem(15)
+
+  &__inner
+    position: relative
+
+  &--fu
+    padding-top: rem(85)
+    
+    #{$this}__left
+      background-color: $white
+      padding-top: 0
+      padding-bottom: 16%
+
+    #{$this}__right
+
