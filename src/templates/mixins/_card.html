@@ -1,7 +1,7 @@
 {% from 'mixins/_icon.html' import icon %}
 {% set icon = icon %}
 
-{% macro card(mod, img, title, text) %}
+{% macro card(mod, img, title, text, date, link) %}
 <!-- begin card -->
 <a href="#" class="card">
   {% if img %}
@@ -9,6 +9,10 @@
   {% endif %}
   
   <span class="card__content">
+    {% if date %}
+    <span class="card__date">март 2020</span>
+    {% endif %}
+
     {% if title %}
     <span class="card__title title title--h4">{{ title | safe }}</span>
     {% endif %}
@@ -17,7 +21,7 @@
     <span class="card__text">{{ text | safe }}</span>
     {% endif %}
 
-    <span class="card__link link">читать {{ icon('right-arrow', 'link__icon') }}</span>
+    <span class="card__link link link--no-hover">{{ link or 'читать' }} {{ icon('right-arrow', 'link__icon') }}</span>
   </span>  
 </a>
 <!-- end card -->

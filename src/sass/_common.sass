@@ -26,15 +26,18 @@ body
     padding-top: rem(30)
 
 .link
+  $this: &
+
   color: $accent
   font-size: em(16)
 
   display: inline-flex
   align-items: center
   position: relative
-
-  +hover
-    text-decoration: underline
+  
+  &:not(#{$this}--no-hover)
+    +hover
+      text-decoration: underline
 
   &__icon
     font-size: .6em

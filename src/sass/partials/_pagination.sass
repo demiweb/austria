@@ -1,0 +1,29 @@
+.pagination
+  display: flex
+  align-items: center
+  justify-content: center
+
+  font-size: em(24)
+  color: #b7b7b7
+
+  &__link
+    min-width: rem(60)
+    height: rem(60)
+    border-radius: 5px
+    border: 1px solid transparent
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    +tr(color .3s, border-color .3s)
+
+    +hover
+      color: $accent
+      border-color: $accent
+
+    &--prev
+      transform: scaleX(-1)
+  &__icon
+    font-size: .5em
+

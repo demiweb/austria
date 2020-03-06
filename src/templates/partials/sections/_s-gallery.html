@@ -1,0 +1,32 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__top section__top--flex">
+      <h2 class="title title--h2">Галерея</h2>
+
+      <a href="#" class="section-link">видео</a>
+    </div>
+
+    <div class="grid">
+      <div class="col col--3">
+        {% include "partials/_aside.html" %}
+      </div>
+
+      <div class="col col--9">
+        <div class="grid">
+          {% for i in range(0, 9) %}
+          <div class="col col--4">
+            {{ mixins.card(
+              img = 'news/2.jpg',
+              date = true,
+              text = 'X Венский фестиваль музыкальных фильмов',
+              link = 'смотреть'
+            ) }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end section -->

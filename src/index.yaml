@@ -4,3 +4,6 @@ PageList:
 - file: home.html
 - file: contacts.html
 - file: about.html
+- file: gallery.html
+- file: gallery-album.html
+- file: gallery-video.html

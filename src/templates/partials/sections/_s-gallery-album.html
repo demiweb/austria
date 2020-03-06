@@ -1,0 +1,25 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__top section__top--flex">
+      <h2 class="title title--h2">Х Венский фестиваль мезыкальных фильмов</h2>
+
+      <a href="#" class="section-link">видео</a>
+    </div>
+
+    <!-- begin gallery -->
+    <div class="gallery js-lightgallery">
+      {% for i in range(0, 16) %}
+      <a
+        href="./img/news/2.jpg"
+        class="gallery__item gallery-item js-lazy"
+        data-background-image="./img/news/2.jpg"
+      ></a>
+      {% endfor %}
+    </div>
+    <!-- end gallery -->
+
+    {% include "partials/_pagination.html" %}
+  </div>
+</section>
+<!-- end section -->

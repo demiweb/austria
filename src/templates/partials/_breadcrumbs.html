@@ -11,3 +11,35 @@
   ) }}
 </div>
 {% endif %}
+
+{% if page === 'gallery-album' %}
+<div class="container">
+  {{ mixins.list(
+    name = 'breadcrumbs',
+    modifications = { wrap: '', list: 'main__breadcrumbs breadcrumbs', item: 'breadcrumbs__item', link: 'breadcrumbs__link' },
+    list = [
+      { link: 'Главная' },
+      { item: mixins.icon('right-arrow', 'breadcrumbs__icon') },
+      { link: 'Галерея' },
+      { item: mixins.icon('right-arrow', 'breadcrumbs__icon') },
+      { item: ' X Венский фестиваль музыкальных фильмов' }
+    ]
+  ) }}
+</div>
+{% endif %}
+
+{% if page === 'gallery-video' %}
+<div class="container">
+  {{ mixins.list(
+    name = 'breadcrumbs',
+    modifications = { wrap: '', list: 'main__breadcrumbs breadcrumbs', item: 'breadcrumbs__item', link: 'breadcrumbs__link' },
+    list = [
+      { link: 'Главная' },
+      { item: mixins.icon('right-arrow', 'breadcrumbs__icon') },
+      { link: 'Галерея' },
+      { item: mixins.icon('right-arrow', 'breadcrumbs__icon') },
+      { item: 'Видео' }
+    ]
+  ) }}
+</div>
+{% endif %}

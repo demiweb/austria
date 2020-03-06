@@ -1,0 +1,11 @@
+{{ mixins.list(
+  name = 'pagination',
+  modifications = { list: 'section__pagination pagination', item: 'pagination__item', link: 'pagination__link' },
+  list = [
+    { link: mixins.icon('double-angle-pointing-to-right', 'pagination__icon'), modLink: 'pagination__link--prev' },
+    { link: '1' },
+    { link: '2' },
+    { link: '3' },
+    { link: mixins.icon('double-angle-pointing-to-right', 'pagination__icon'), modLink: 'pagination__link--next' }
+  ]
+) }}

@@ -1,0 +1,16 @@
+<!-- begin asie -->
+<aside class="aside">
+  {{ mixins.list(
+    name = 'nav',
+    hasWrap = true,
+    modifications = { wrap: 'nav--aside', list: 'nav__list', item: 'nav__item', link: 'nav__link' },
+    list = [
+      { link: 'Культура', modLink: 'nav__link--current' },
+      { link: 'Политика' },
+      { link: 'Праздники' },
+      { link: 'Общество' },
+      { link: 'Волонтеры' }
+    ]
+  ) }}
+</aside>
+<!-- end asie -->

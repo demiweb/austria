@@ -1,0 +1,59 @@
+.gallery
+  $this: &
+
+  display: flex
+  flex-wrap: wrap
+  margin-left: rem(-15)
+  margin-right: rem(-15)
+
+  &__item
+    width: calc(25% - #{rem(30)})
+    margin-left: rem(15)
+    margin-right: rem(15)
+    margin-bottom: rem(30)
+
+  &--lg
+    #{$this}__item
+      width: calc(50% - #{rem(30)})
+      margin-bottom: rem(40)
+
+.gallery-item
+  $this: &
+
+  +cover
+  display: block
+  background-color: $light
+  border-radius: 5px
+  padding-top: 15%
+
+  &__img
+    +cover
+    display: block
+    background-color: $light
+    border-radius: 5px
+    padding-top: 55%
+
+  &--lg
+    position: relative
+    padding-top: 0
+    border-radius: 0
+    background-color: transparent
+
+    #{$this}__img
+      position: relative
+      display: block
+      border-radius: 5px
+      overflow: hidden
+
+      color: $white
+      margin-bottom: rem(25)
+
+      +before
+        +coverdiv
+        background-color: rgba($black, .65)
+
+    #{$this}__icon
+      font-size: rem(75)
+      z-index: 1
+      +vcenter
+
