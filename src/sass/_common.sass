@@ -43,4 +43,18 @@ body
     font-size: .6em
     margin-left: 1em
 
+.list
+  li
+    position: relative
+    padding-left: .8em
+
+    &::before
+      content: '\25AA'
+      display: inline-block
+      color: $accent
+      margin-right: .5em
+      position: absolute
+      top: .1em
+      left: 0
+
     

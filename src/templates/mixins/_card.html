@@ -3,7 +3,7 @@
 
 {% macro card(mod, img, title, text, date, link) %}
 <!-- begin card -->
-<a href="#" class="card">
+<a href="#" class="card{% if mod %} {{ mod }}{% endif %}">
   {% if img %}
   <span class="card__img js-lazy" data-background-image="./img/{{ img }}"></span>
   {% endif %}

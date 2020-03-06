@@ -1,0 +1,26 @@
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__top">
+      <h2 class="title title--h2">Новости</h2>
+    </div>
+
+    <div class="grid">
+      {% for i in range(0, 10) %}
+        <div class="col col--6">
+          {{ mixins.card(
+            mod = 'card--hor',
+            img = 'news/2.jpg',
+            title = 'Отпуск в Австрии',
+            text = 'Проведите Ваш следующий отпуск в Австрии и узнайте больше об истории и культуре страны.'
+          ) }}
+        </div>
+      {% endfor %}      
+    </div>
+
+   
+
+    {% include "partials/_pagination.html" %}
+  </div>
+</section>
+<!-- end section -->

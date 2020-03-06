@@ -7,3 +7,5 @@ PageList:
 - file: gallery.html
 - file: gallery-album.html
 - file: gallery-video.html
+- file: news.html
+- file: info.html

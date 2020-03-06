@@ -1,4 +1,6 @@
 .card
+  $this: &
+
   display: flex
   flex-direction: column
   height: 100%  
@@ -27,3 +29,14 @@
     color: #959595
     font-size: em(16)
     margin-bottom: rem(10)
+
+  &--hor
+    flex-direction: row
+
+    #{$this}__img
+      width: calc(50% - #{rem(15)})
+      padding-top: 32%
+
+    #{$this}__content
+      width: calc(50% + #{rem(15)})
+      padding-left: rem(15)
