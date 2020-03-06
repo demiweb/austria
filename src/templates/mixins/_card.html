@@ -1,0 +1,24 @@
+{% from 'mixins/_icon.html' import icon %}
+{% set icon = icon %}
+
+{% macro card(mod, img, title, text) %}
+<!-- begin card -->
+<a href="#" class="card">
+  {% if img %}
+  <span class="card__img js-lazy" data-background-image="./img/{{ img }}"></span>
+  {% endif %}
+  
+  <span class="card__content">
+    {% if title %}
+    <span class="card__title title title--h4">{{ title | safe }}</span>
+    {% endif %}
+
+    {% if text %}
+    <span class="card__text">{{ text | safe }}</span>
+    {% endif %}
+
+    <span class="card__link link">читать {{ icon('right-arrow', 'link__icon') }}</span>
+  </span>  
+</a>
+<!-- end card -->
+{% endmacro %}

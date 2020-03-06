@@ -1,0 +1,16 @@
+.slider
+  &__wrap
+    position: relative
+
+  &--hero
+    &__wrap
+      .slider
+        &__pagination
+          position: absolute
+          z-index: 1
+          bottom: rem(45)
+          left: 50%
+          transform: translate(-50%, 0)
+          width: 100%
+          max-width: $container-max-width
+          padding: 0 $container-padding-static

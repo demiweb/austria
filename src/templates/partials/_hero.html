@@ -1,5 +1,28 @@
 <!-- begin hero -->
 <section class="hero">
-  <h1>hello from hero</h1>
+  <div class="hero-slider slider__wrap slider--hero__wrap">
+    <div class="slider slder--hero js-slider">
+      {# {% for i in range(0, 3) %} #}
+      <div class="slide hero__slide js-lazy" data-background-image="./img/hero/home.jpg">
+        <div class="container">
+          <div class="hero__content">
+            <h2 class="hero__title title title--h1">Добро пожаловать на сайт</h2>
+
+            <div class="hero__subttl">Почетного консульства Австрийской Республики в Новосибирске!</div>
+
+            <div class="hero__btn">
+              {{ mixins.btn(
+                title = 'подробнее',
+                mod = ''
+              ) }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {# {% endfor %} #}
+    </div>
+
+    <div class="slider__pagination js-slider-pagination">pagination</div>
+  </div>
 </section>
 <!-- end hero -->

@@ -1,0 +1,44 @@
+.header
+  &__top
+    background-color: $accent
+    color: $white
+    font-size: em(16)
+
+  &__info
+    display: flex
+    align-items: center
+
+  &__time
+    margin-right: rem(20)
+
+  &__top-in
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    height: $header-top-height
+    padding-top: rem(5)
+    padding-bottom: rem(5)
+
+  &__bottom-in
+    display: flex
+    align-items: center
+
+    padding-top: rem(15)
+    padding-bottom: rem(15)
+
+  &__nav
+    margin-left: auto
+
+
+.lang
+  $this: &
+
+  &__item
+    display: inline-block
+    &--current
+      text-decoration: underline
+
+  &__link
+    +hover
+      @extend #{$this}__item--current

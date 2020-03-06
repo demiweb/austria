@@ -1,0 +1,44 @@
+.nav
+  $this: &
+
+  &__item
+    display: inline-block
+    +notfirst
+      margin-left: rem(20)
+
+    &--current
+      a
+        text-decoration: underline
+      +hover
+        a
+          text-decoration: none
+
+  &__link
+    position: relative
+    display: inline-block
+
+    +tr(color .3s)
+    +before
+      position: absolute
+      bottom: -.5em
+      left: 0
+      right: 0
+      border-top: 2px solid currentColor
+      +hidden
+      +tr(opacity .3s, visibility .3s)
+    +hover
+      color: $accent
+      +before
+        +visible
+
+  &--footer
+    #{$this}__item
+      display: block
+      margin-left: 0 !important
+      +notlast
+        margin-bottom: rem(10)
+
+    #{$this}__link
+      +hover
+        +before
+          // display: none

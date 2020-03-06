@@ -1,5 +1,44 @@
 <!-- begin footer -->
 <footer class="footer">
-  hello from footer
+  <div class="container">
+    <div class="footer__inner">
+      {% include "partials/_logo-footer.html" %}
+
+      <div class="footer__right">
+        <div class="footer__nav">
+          {{ mixins.list(
+            name = 'nav',
+            hasWrap = true,
+            modifications = { wrap: 'nav--footer', list: 'nav__list', item: 'nav__item', link: 'nav__link' },
+            list = [
+              { link: 'Главная' },
+              { link: 'Информация' },
+              { link: 'Новости' }
+            ]
+          ) }}
+
+          {{ mixins.list(
+            name = 'nav',
+            hasWrap = true,
+            modifications = { wrap: 'nav--footer', list: 'nav__list', item: 'nav__item', link: 'nav__link' },
+            list = [
+              { link: 'Галерея' },
+              { link: 'Об Австрии' },
+              { link: 'Контакты' }
+            ]
+          ) }}
+        </div>
+
+        <div class="footer__btn">
+          {{ mixins.btn(
+            title = 'задать вопрос',
+            mod = ''
+          ) }}
+        </div>
+      </div>
+
+      <div class="footer__copy">© 2020 Почетное консульство Австрийской Республики в Новосибирске</div>
+    </div>
+  </div>
 </footer>
 <!-- end footer -->

@@ -1,0 +1,33 @@
+.logo
+  $this: &
+
+  display: flex
+  align-items: center
+
+  &__img
+    margin-right: rem(25)
+    flex: 0 0 rem(120)
+
+  &__content
+    display: block
+
+  &__title
+    display: inline-block
+    text-transform: uppercase
+    font-weight: 700
+
+    background-color: $accent
+    color: $white
+
+    padding: .2em .7em
+    margin-bottom: rem(10)
+
+  &__text
+    display: block
+
+  &--footer
+    #{$this}__img
+      flex: 0 0 rem(90)
+
+    #{$this}__title
+      background-color: #464646

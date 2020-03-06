@@ -1,5 +1,48 @@
 <!-- begin header -->
 <header class="header">
-  hello from header
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-in">
+        <div class="header__info">
+          <div class="header__time">16:48</div>
+          <div class="header__curr">10 €= 687,5 руб.</div>
+        </div>
+
+        <div class="header__lang">
+         {{ mixins.list(
+           name = 'lang',
+           modifications = { wrap: '', item: 'lang__item', link: 'lang__link' },
+           list = [
+             { link: 'DE' },
+             { item: '|' },
+             { item: 'RU', modItem: 'lang__item--current' }
+           ]
+         ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__bottom">
+    <div class="container">
+      <div class="header__bottom-in">
+        {% include "partials/_logo.html" %}
+
+        {{ mixins.list(
+          name = 'nav',
+          hasWrap = true,
+          modifications = { wrap: 'header__nav', list: 'nav__list', item: 'nav__item', link: 'nav__link' },
+          list = [
+            { link: 'Информация' },
+            { link: 'Новости' },
+            { link: 'Галерея' },
+            { link: 'Об Австрии' },
+            { link: 'Контакты' },
+            { link: 'Посольство Австрии в Москве', modItem: 'nav__item--current' }
+          ]
+        ) }}
+      </div>
+    </div>
+  </div>
 </header>
 <!-- end header -->

@@ -1,0 +1,27 @@
+.hero
+  &__slide
+    +cover
+    background-color: $c-text-aux
+    color: $white
+    position: relative
+
+    padding-top: rem(170)
+    padding-bottom: rem(160)
+
+    +before
+      +coverdiv
+      z-index: 0
+      background-color: rgba($black, .75)
+
+  &__title
+    margin-bottom: rem(15)
+
+  &__subttl
+    font-size: em(30)
+    font-weight: 300
+    margin-bottom: rem(45)
+
+  &__content
+    max-width: 740px
+    position: relative
+    z-index: 1

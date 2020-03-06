@@ -1,0 +1,28 @@
+.contacts-block
+  &__title
+    font-weight: 700
+    font-size: em(24)
+    margin-bottom: rem(15)
+
+  &__contacts
+    margin-bottom: rem(15)
+
+.contacts
+  &__item
+    position: relative
+    padding-left: rem(30)
+
+    +notlast
+      margin-bottom: rem(10)
+
+    a
+      +tr(color .3s)
+      +hover
+        color: $accent
+
+  &__icon
+    position: absolute
+    top: .3rem
+    left: 0
+    fill: $accent
+    font-size: .8em

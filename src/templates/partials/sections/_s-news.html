@@ -1,0 +1,48 @@
+{%set
+news = [
+  {
+    img: 'news/2.jpg',
+    title: 'Отпуск в Австрии',
+    text: 'Проведите Ваш следующий отпуск в Австрии и узнайте больше об истории и культуре страны.'
+  },
+  {
+    img: 'news/3.jpg',
+    title: 'Запись на подачу документов о выдаче визы',
+    text: 'Во избежание долгого ожидания в приемные часы Вы можете записаться на прием онлайн.'
+  },
+  {
+    img: 'news/4.jpg',
+    title: 'Столетие Австрийской Республики',
+    text: 'Информацию о памятных мероприятиях Вы найдете на сайте Совета: oesterreich100.at'
+  },
+  {
+    img: 'news/5.jpg',
+    title: 'В экстренных случаях',
+    text: 'Австрийские граждане, попавшие в чрезвычайную ситуацию на территории, находящейся ...'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="container">
+    <div class="section__top section__top--flex">
+      <h2 class="title title--h2">Новости</h2>
+
+      <a href="#" class="section-link">все новости</a>
+    </div>
+
+    <div class="grid">
+      {% for i in news %}
+      <div class="col col--3">
+        {{ mixins.card(
+          img = i.img,
+          title = i.title,
+          text = i.text
+        ) }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!-- end section -->

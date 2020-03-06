@@ -20,4 +20,20 @@ body
   $this: &
   &--loaded:not(#{$this}--no-fade-in)
     animation: fadeIn 1s
+
+.link
+  color: $accent
+  font-size: em(16)
+
+  display: inline-flex
+  align-items: center
+  position: relative
+
+  +hover
+    text-decoration: underline
+
+  &__icon
+    font-size: .6em
+    margin-left: 1em
+
     

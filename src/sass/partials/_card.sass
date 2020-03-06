@@ -1,0 +1,24 @@
+.card
+  display: flex
+  flex-direction: column
+  height: 100%  
+
+  &__img
+    +cover
+    background-color: $light
+    border-radius: 5px
+    padding-top: percentage(245 / 330)
+
+  &__content
+    padding: rem(25) 0
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+
+  &__title
+    margin-bottom: rem(10)
+    flex-grow: 1
+
+  &__text
+    color: $c-text-aux
+    margin-bottom: rem(10)
