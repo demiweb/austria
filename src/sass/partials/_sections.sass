@@ -2,60 +2,69 @@
   $this: &
 
   position: relative
+  background-color: $lighter
 
-  &__left
-    background-color: $lighter
+  &__content
     padding-top: rem(90)
     padding-bottom: rem(90)
 
-
-  &__right
-    position: absolute
-    z-index: 1
-    top: 0
-    bottom: 0
-    right: 0
-
-    width: percentage(1180 / 1920)
-
-    +lg
-      width: 50%
-
     +sm
-      position: relative
-      padding-top: 50%
-      width: 100%
+      padding-top: rem(30)
+      padding-bottom: rem(30)
 
-    iframe
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
 
-  &__content
-    max-width: 34%
-    padding-right: rem(15)
-    +lg
-      max-width: 50%
-    +sm
-      max-width: none
+  // &__right
+  //   position: absolute
+  //   z-index: 1
+  //   top: 0
+  //   bottom: 0
+  //   right: 0
+
+  //   width: percentage(1180 / 1920)
+
+  //   +lg
+  //     width: 50%
+
+  //   +sm
+  //     position: relative
+  //     padding-top: 50%
+  //     width: 100%
+
+  //   iframe
+  //     position: absolute
+  //     top: 0
+  //     left: 0
+  //     width: 100%
+  //     height: 100%
+
+  // &__content
+    // max-width: 75%
+    // padding-right: rem(15)
+    // +lg
+    //   max-width: 50%
+    // +sm
+    //   max-width: none
 
   &__inner
     position: relative
 
   &--fu
     padding-top: rem(85)
+    background-color: $white
 
     +sm
       padding-top: rem(50, $base-fz-sm)
     
-    #{$this}__left
-      background-color: $white
-      padding-top: 0
-      padding-bottom: 16%
-      +sm
-        padding-bottom: rem(50)
+    // #{$this}__left
+    //   background-color: $white
+    //   padding-top: 0
+    //   padding-bottom: 16%
+    //   +sm
+    //     padding-bottom: rem(50)
 
-    #{$this}__right
+    #{$this}__content
+      padding-bottom: 16%
+      padding-top: 0 !important
+      +sm
+        padding-bottom: rem(30)
 

@@ -1,48 +1,56 @@
 <!-- begin section -->
 <section class="s-contacts">
-  <div class="s-contacts__left">
-    <div class="container">
-      <div class="s-contacts__content">
-        <div class="section__top">
-          <h2 class="title title--h2">Контакты</h2>
-        </div>
-
-        <!-- begin contacts-block -->
-        <div class="contacts-block">
-          <div class="contacts-block__title">Почётный Консул Австрийской республики в Новосибирске</div>
-
-          {{ mixins.list(
-            name = 'contacts',
-            modifications = { wrap: '', list: 'contacts-block__contacts contacts', item: 'contacts__item', link: '' },
-            list = [
-              { item: mixins.icon('maps-and-flags', 'contacts__icon') + 'ул. Тургенева, 16 <br> 750069 г. Новосибирск' },
-              { item: mixins.icon('phone', 'contacts__icon') + '
-                <p><a href="tel:+74957806066">+7 (495) 780 60 66</a></p>
-                <p><a href="tel:+74959374269">+7 (495) 937 42 69</a></p>
-              ' },
-              { item: mixins.icon('email', 'contacts__icon') + '<a href="mailto:info@hkat-ekb.ru">info@hkat-ekb.ru</a>' },
-              { item: mixins.icon('clock', 'contacts__icon') + 'пн-пт 9:00-18:00' }
-            ]
-          ) }}
-
-          <div class="contacts-block__bottom">
-            <strong>Прием граждан:</strong>
-            пн-пт 10:00-16:00
+  <div class="container">
+    <div class="grid">
+      <div class="col col--lg-4 col--sm-6">
+        <div class="s-contacts__content">
+          <div class="section__top">
+            <h2 class="title title--h2">Контакты</h2>
           </div>
+
+          <!-- begin contacts-block -->
+          <div class="contacts-block">
+            <div class="contacts-block__title">Почётный Консул Австрийской республики в Новосибирске</div>
+
+            {{ mixins.list(
+              name = 'contacts',
+              modifications = { wrap: '', list: 'contacts-block__contacts contacts', item: 'contacts__item', link: '' },
+              list = [
+                { item: mixins.icon('maps-and-flags', 'contacts__icon') + 'ул. Тургенева, 16 <br> 750069 г. Новосибирск' },
+                { item: mixins.icon('phone', 'contacts__icon') + '
+                  <p><a href="tel:+74957806066">+7 (495) 780 60 66</a></p>
+                  <p><a href="tel:+74959374269">+7 (495) 937 42 69</a></p>
+                ' },
+                { item: mixins.icon('email', 'contacts__icon') + '<a href="mailto:info@hkat-ekb.ru">info@hkat-ekb.ru</a>' },
+                { item: mixins.icon('clock', 'contacts__icon') + 'пн-пт 9:00-18:00' }
+              ]
+            ) }}
+
+            <div class="contacts-block__bottom">
+              <strong>Прием граждан:</strong>
+              пн-пт 10:00-16:00
+            </div>
+          </div>
+          <!-- end contacts-block -->
         </div>
-        <!-- end contacts-block -->
+      </div>
+
+      <div class="col col--lg-8 col--sm-6">
+        <!-- begin map -->
+        <div class="map">
+          <iframe
+            class="js-lazy"
+            src=""
+            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2287.21600580192!2d82.9410277955716!3d55.02190666651222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5e1cd4e02f1%3A0x8a64b0ed144191c4!2z0YPQuy4g0KLRg9GA0LPQtdC90LXQstCwLCAxNiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQuiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA2MzAwMDg!5e0!3m2!1sru!2sua!4v1583484892860!5m2!1sru!2sua"
+            frameborder="0"
+            style="border:0;"
+            allowfullscreen=""></iframe>
+        </div>
+        <!-- end map -->
       </div>
     </div>
   </div>
 
-  <div class="s-contacts__right">
-    <iframe
-      class="js-lazy"
-      src=""
-      data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2287.21600580192!2d82.9410277955716!3d55.02190666651222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5e1cd4e02f1%3A0x8a64b0ed144191c4!2z0YPQuy4g0KLRg9GA0LPQtdC90LXQstCwLCAxNiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQuiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA2MzAwMDg!5e0!3m2!1sru!2sua!4v1583484892860!5m2!1sru!2sua"
-      frameborder="0"
-      style="border:0;"
-      allowfullscreen=""></iframe>
-  </div>
+
 </section>
 <!-- end section -->
