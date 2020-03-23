@@ -49,12 +49,17 @@ body
     padding-left: .8em
 
     &::before
-      content: '\25AA'
+      content: ''
       display: inline-block
-      color: $accent
+      // color: $accent
+      background-color: $accent
+
+      width: rem(5)
+      height: rem(5)
+
       margin-right: .5em
       position: absolute
-      top: .1em
+      top: .6em
       left: 0
 
 .close
