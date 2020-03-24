@@ -9,7 +9,7 @@ html
 body
   background-color: $white  
   min-width: 320px  
-  +no-scroll  
+  +no-scroll
 
 .icon
   display: inline-block
@@ -22,8 +22,14 @@ body
     animation: fadeIn 1s
 
 .main
+  flex-grow: 1
   &__breadcrumbs
     padding-top: rem(30)
+
+.out
+  height: (100 / 0.7) * 1vh
+  display: flex
+  flex-direction: column
 
 .link
   $this: &
